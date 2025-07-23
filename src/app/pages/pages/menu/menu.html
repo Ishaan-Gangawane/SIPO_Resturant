@@ -1,0 +1,42 @@
+<div class="menu-wrapper">
+    <div class="about-title d-flex justify-center">
+      <p class="a-border">Special Menu</p>
+    </div>
+  
+    <div class="menu-container">
+      <mat-card class="menu-card" *ngFor="let item of menuItems">
+        <img mat-card-image [src]="item.image" [alt]="item.title" />
+  
+        <mat-card-content>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+  
+          <div class="menu-info">
+            <div><mat-icon>sell</mat-icon> Category: {{ item.category }}</div>
+            <div><mat-icon>check_circle</mat-icon> Availability: {{ item.available ? 'Available' : 'Out of stock' }}</div>
+            <div><mat-icon>balance</mat-icon> Weight: {{ item.weight }}</div>
+            <div><mat-icon>eco</mat-icon> Vegetarian: {{ item.vegetarian ? 'Yes' : 'No' }}</div>
+          </div>
+  
+          <div class="rating">
+            <span>Customer Review</span>
+            <div class="stars">
+              <mat-icon *ngFor="let star of getStars(item.rating)">{{ star }}</mat-icon>
+            </div>
+          </div>
+  
+          <div class="price-row">
+            <span class="price">${{ item.price }}</span>
+            <span class="icons">
+              <mat-icon>favorite_border</mat-icon>
+              <mat-icon>shopping_cart</mat-icon>
+            </span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="full-menu-btn-align ">
+        <button class="read-more-btn" mat-raised-button>Full Menu</button>
+      </div>
+  </div>
+  

@@ -1,0 +1,19 @@
+<div class="about-title d-flex justify-center">
+    <p class="a-border">Our Services</p>
+  </div>
+  <div class="d-flex justify-center fz-25">
+    <p>"This is what we do , and we do it perfectly."</p>
+</div>
+
+  <div class="features-container">
+    <div
+      class="feature-card"
+      *ngFor="let item of features; let i = index"
+      [ngClass]="{ 'red-bg': i % 2 === 1 }"
+    >
+      <mat-icon class="feature-icon">{{ item.icon }}</mat-icon>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+  

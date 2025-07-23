@@ -1,0 +1,45 @@
+<div class="chefs-wrapper">
+    <!-- <div class="header">
+      <p class="title">Meet Our Chefs</p>
+      <p class="subtitle">"What can be better, than food prepared with love."</p>
+    </div> -->
+
+    <div class="about-title d-flex justify-center">
+        <p class="a-border" >Meet Our Chefs</p>
+    </div>
+
+    <div class="d-flex justify-center fz-25">
+        <p>"What can be better, than food prepared with love."</p>
+    </div>
+  
+    <div class="bg-chef-image">
+      <div class="overlay">
+        <div class="chefs-grid">
+          <div class="chef-card" *ngFor="let chef of chefs">
+            <img [src]="chef.image" alt="{{ chef.name }}" class="chef-img" />
+  
+            <div class="chef-info">
+              <h3>{{ chef.name }}</h3>
+              <p class="role">{{ chef.title }}</p>
+  
+              <div class="stars">
+                <mat-icon *ngFor="let s of [].constructor(Math.floor(chef.stars))">star</mat-icon>
+                <mat-icon *ngIf="chef.stars % 1 !== 0">star_half</mat-icon>
+              </div>
+  
+              <!-- <div class="social-icons">
+                <mat-icon>facebook</mat-icon>
+                <mat-icon>twitter</mat-icon>
+                <mat-icon>linkedin</mat-icon>
+                <mat-icon>instagram</mat-icon>
+                <mat-icon>link</mat-icon>
+              </div> -->
+  
+              <button class="profile-btn">View Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
